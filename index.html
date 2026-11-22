@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sachin | Talent Connector & Personal Branding Enthusiast</title>
+
+<meta name="description" content="Sachin - Independent Recruiter, Talent Connector, Branding Enthusiast, AI Learner">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<style>
+:root{
+--bg:#070b14;
+--card:rgba(255,255,255,.05);
+--text:#ffffff;
+--muted:#b3bfd1;
+--primary:#3b82f6;
+--cyan:#06b6d4;
+--border:rgba(255,255,255,.09);
+--shadow:0 20px 50px rgba(0,0,0,.35);
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Inter,Segoe UI,sans-serif;
+background:var(--bg);
+color:var(--text);
+overflow-x:hidden;
+}
+
+body::before{
+content:"";
+position:fixed;
+width:700px;
+height:700px;
+background:radial-gradient(circle,#2563eb40,transparent 70%);
+top:-250px;
+right:-250px;
+z-index:-1;
+}
+
+body::after{
+content:"";
+position:fixed;
+width:600px;
+height:600px;
+background:radial-gradient(circle,#06b6d430,transparent 70%);
+bottom:-250px;
+left:-250px;
+z-index:-1;
+}
+
+nav{
+position:fixed;
+top:20px;
+left:50%;
+transform:translateX(-50%);
+width:95%;
+max-width:1200px;
+padding:15px 25px;
+background:rgba(10,15,25,.7);
+backdrop-filter:blur(20px);
+border:1px solid var(--border);
+border-radius:18px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+}
+
+.logo{
+font-size:22px;
+font-weight:700;
+}
+
+.nav-links{
+display:flex;
+gap:25px;
+}
+
+.nav-links a{
+color:white;
+text-decoration:none;
+transition:.3s;
+}
+
+.nav-links a:hover{
+color:var(--cyan);
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:50px;
+}
+
+.hero-content{
+max-width:900px;
+}
+
+.tag{
+display:inline-block;
+padding:10px 18px;
+border:1px solid var(--border);
+border-radius:100px;
+margin-bottom:25px;
+background:rgba(255,255,255,.03);
+}
+
+.hero h1{
+font-size:clamp(3rem,8vw,6rem);
+line-height:1.1;
+margin-bottom:20px;
+}
+
+.gradient{
+background:linear-gradient(90deg,#3b82f6,#06b6d4);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero p{
+font-size:1.2rem;
+color:var(--muted);
+max-width:700px;
+margin:auto;
+line-height:1.8;
+}
+
+.buttons{
+margin-top:35px;
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:14px 30px;
+border-radius:12px;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+}
+
+.primary{
+background:linear-gradient(90deg,#2563eb,#06b6d4);
+color:white;
+}
+
+.secondary{
+border:1px solid var(--border);
+color:white;
+}
+
+.btn:hover{
+transform:translateY(-4px);
+}
+
+section{
+padding:100px 8%;
+}
+
+.section-title{
+font-size:3rem;
+margin-bottom:20px;
+text-align:center;
+}
+
+.section-sub{
+text-align:center;
+color:var(--muted);
+margin-bottom:60px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.card{
+background:var(--card);
+backdrop-filter:blur(20px);
+border:1px solid var(--border);
+padding:30px;
+border-radius:24px;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+border-color:var(--cyan);
+}
+
+.card h3{
+margin-bottom:15px;
+}
+
+.card p{
+color:var(--muted);
+line-height:1.7;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.stat{
+padding:30px;
+text-align:center;
+background:var(--card);
+border:1px solid var(--border);
+border-radius:20px;
+}
+
+.number{
+font-size:3rem;
+font-weight:700;
+color:var(--cyan);
+margin-bottom:10px;
+}
+
+.timeline{
+max-width:900px;
+margin:auto;
+}
+
+.timeline-item{
+background:var(--card);
+border:1px solid var(--border);
+padding:25px;
+margin-bottom:20px;
+border-radius:20px;
+}
+
+.contact{
+text-align:center;
+}
+
+.socials{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-top:30px;
+}
+
+.socials a{
+padding:12px 25px;
+border-radius:12px;
+border:1px solid var(--border);
+text-decoration:none;
+color:white;
+transition:.3s;
+}
+
+.socials a:hover{
+background:var(--primary);
+}
+
+footer{
+padding:40px;
+text-align:center;
+color:var(--muted);
+border-top:1px solid var(--border);
+}
+
+@media(max-width:768px){
+
+.nav-links{
+display:none;
+}
+
+.hero h1{
+font-size:3rem;
+}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">⚡ Sachin</div>
+
+<div class="nav-links">
+<a href="#about">About</a>
+<a href="#expertise">Expertise</a>
+<a href="#projects">Projects</a>
+<a href="#journey">Journey</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="tag">
+🚀 Building Talent, Technology & Opportunity
+</div>
+
+<h1>
+Hi, I'm <span class="gradient">Sachin</span>
+</h1>
+
+<h2 style="margin-bottom:25px;">
+Talent Connector • Strategic Recruiter • Branding Enthusiast • AI Learner
+</h2>
+
+<p>
+Helping professionals and organizations connect through strategic hiring,
+personal branding, talent acquisition, sourcing excellence, and emerging technologies.
+</p>
+
+<div class="buttons">
+<a href="#about" class="btn primary">Explore My Journey</a>
+<a href="#contact" class="btn secondary">Connect With Me</a>
+</div>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="section-title">About Me</h2>
+
+<p class="section-sub">
+Building careers, brands, and opportunities through meaningful connections.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<h3>🎯 Recruitment</h3>
+<p>
+Full-cycle recruiting, candidate sourcing,
+talent mapping, stakeholder partnership,
+and strategic hiring.
+</p>
+</div>
+
+<div class="card">
+<h3>🌐 Branding</h3>
+<p>
+Professional branding, LinkedIn optimization,
+personal positioning, and reputation building.
+</p>
+</div>
+
+<div class="card">
+<h3>🤖 Technology</h3>
+<p>
+Exploring AI, GitHub, data science,
+automation, analytics, and future-ready skills.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="expertise">
+
+<h2 class="section-title">Core Expertise</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Boolean Search</h3>
+<p>Advanced sourcing methodology and talent discovery.</p>
+</div>
+
+<div class="card">
+<h3>X-Ray Recruiting</h3>
+<p>Precision candidate identification across platforms.</p>
+</div>
+
+<div class="card">
+<h3>ATS Systems</h3>
+<p>Workflow optimization and recruiting operations.</p>
+</div>
+
+<div class="card">
+<h3>Employer Branding</h3>
+<p>Enhancing talent attraction and retention strategies.</p>
+</div>
+
+<div class="card">
+<h3>LinkedIn Strategy</h3>
+<p>Building visibility and professional influence.</p>
+</div>
+
+<div class="card">
+<h3>Future AI Skills</h3>
+<p>Leveraging AI to transform hiring and productivity.</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Impact Snapshot</h2>
+
+<div class="stats">
+
+<div class="stat">
+<div class="number">∞</div>
+<p>Growth Mindset</p>
+</div>
+
+<div class="stat">
+<div class="number">24/7</div>
+<p>Continuous Learning</p>
+</div>
+
+<div class="stat">
+<div class="number">AI</div>
+<p>Technology Driven</p>
+</div>
+
+<div class="stat">
+<div class="number">100%</div>
+<p>People Focused</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2 class="section-title">Featured Portfolio</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>📊 Recruitment Analytics</h3>
+<p>
+Data-driven hiring dashboards and recruiting insights.
+</p>
+</div>
+
+<div class="card">
+<h3>💼 Personal Branding Projects</h3>
+<p>
+Profile optimization, positioning strategy, and visibility enhancement.
+</p>
+</div>
+
+<div class="card">
+<h3>🤖 AI Learning Portfolio</h3>
+<p>
+Exploration of AI, machine learning, and analytics projects.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="journey">
+
+<h2 class="section-title">My Journey</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+🏡 Ajekar, Karnataka
+</div>
+
+<div class="timeline-item">
+🎯 Recruitment & Talent Acquisition
+</div>
+
+<div class="timeline-item">
+🌎 Professional Networking & Branding
+</div>
+
+<div class="timeline-item">
+📊 Data Science Learning
+</div>
+
+<div class="timeline-item">
+🤖 AI-Powered Future
+</div>
+
+</div>
+
+</section>
+
+<section id="contact" class="contact">
+
+<h2 class="section-title">Let's Connect</h2>
+
+<p class="section-sub">
+Open to collaboration, networking, learning, and opportunities.
+</p>
+
+<div class="socials">
+
+<a href="https://linkedin.com" target="_blank">
+LinkedIn
+</a>
+
+<a href="https://github.com" target="_blank">
+GitHub
+</a>
+
+<a href="https://kaggle.com" target="_blank">
+Kaggle
+</a>
+
+<a href="mailto:your@email.com">
+Email
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Sachin
+
+<br><br>
+
+Connecting Talent • Technology • Opportunity
+
+</footer>
+
+</body>
+</html>
